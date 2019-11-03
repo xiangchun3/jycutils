@@ -1,0 +1,16 @@
+{
+  "name": "jycutils",
+  "version": "0.0.9",
+  "description": "dev utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiangchun3/jycutils.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/xiangchun3/jycutils#readme"
+}
