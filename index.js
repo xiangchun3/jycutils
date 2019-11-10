@@ -94,4 +94,26 @@ if (/(y+)/.test(fmt)) {
   return fmt
 }
 
-export { check, browserInfo, type, queryString, formatDate }
+/**
+ * 获取数据类型
+ * @param {any} target 需要判断的源数据
+ */
+function getType(target) {
+  return Object.prototype.toString.call(target).slice(8, -1).toLowerCase();
+}
+
+function deepClone(target) {
+	// 只考虑Object、Array两种可遍历类型，其它类型直接返回原值
+	if(Object.prototype.toString.call(target) === '[Object Object]' || Object.prototype.toString.call(target) === '[Object Array]') {
+    var newValue = Array.isArray(target) ? [] : {};
+    for(let k in target) {
+        deepClone(target[k]);
+    }
+  }else{
+    return target;
+  }
+
+	return newValue;
+}
+
+export { check, browserInfo, type, queryString, formatDate , getType, deepClone}
