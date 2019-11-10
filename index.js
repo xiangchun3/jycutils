@@ -104,7 +104,7 @@ function getType(target) {
 
 function deepClone(target) {
 	// 只考虑Object、Array两种可遍历类型，其它类型直接返回原值
-	if(Object.prototype.toString.call(target) === '[Object Object]' || Object.prototype.toString.call(target) === '[Object Array]') {
+	if(Object.prototype.toString.call(target) === '[object Object]' || Object.prototype.toString.call(target) === '[object Array]') {
     var newValue = Array.isArray(target) ? [] : {};
     for(let k in target) {
         deepClone(target[k]);
